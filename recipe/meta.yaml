@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = '1.0.1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tensr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tensr/tensr_{{ version }}.tar.gz
-  sha256: ba15d4c13e9d9594845d042d83dbea2ca22ff17aabe0f8204a7f522729a4ec15
+  sha256: dded318c4f4f1fbe66d229047bc23db2c8ec462f066bb87a45c83e77541ecbfc
 
 build:
   merge_build_host: True  # [win]
@@ -24,12 +24,15 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
+    - r-assertthat
 
   run:
     - r-base
+    - r-assertthat
 
 test:
   commands:
@@ -44,6 +47,8 @@ about:
     estimation procedures are implemented. For testing, a likelihood ratio testing procedure
     is available. This package also contains additional functions for manipulating and
     decomposing tensor data sets. This work was partially supported by NSF grant DMS-1505136.
+    Details of the methods are described in Gerard and Hoff (2015) <doi:10.1016/j.jmva.2015.01.020>
+    and Gerard and Hoff (2016) <doi:10.1016/j.laa.2016.04.033>.
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
