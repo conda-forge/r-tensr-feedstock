@@ -15,8 +15,9 @@ source:
   sha256: dded318c4f4f1fbe66d229047bc23db2c8ec462f066bb87a45c83e77541ecbfc
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
+  number: 1000
 
   rpaths:
     - lib/R/lib/
@@ -50,8 +51,7 @@ about:
     Details of the methods are described in Gerard and Hoff (2015) <doi:10.1016/j.jmva.2015.01.020>
     and Gerard and Hoff (2016) <doi:10.1016/j.laa.2016.04.033>.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
