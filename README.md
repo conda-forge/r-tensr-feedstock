@@ -1,11 +1,11 @@
-About r-tensr
-=============
+About r-tensr-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tensr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=tensr
 
 Package license: GPL-3
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tensr-feedstock/blob/main/LICENSE.txt)
 
 Summary: A collection of functions for Kronecker structured covariance estimation and testing under the array normal model. For estimation, maximum likelihood and Bayesian equivariant estimation procedures are implemented. For testing, a likelihood ratio testing procedure is available. This package also contains additional functions for manipulating and decomposing tensor data sets. This work was partially supported by NSF grant DMS-1505136. Details of the methods are described in Gerard and Hoff (2015) <doi:10.1016/j.jmva.2015.01.020> and Gerard and Hoff (2016) <doi:10.1016/j.laa.2016.04.033>.
 
